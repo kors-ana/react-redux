@@ -1,12 +1,18 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 
-import Page from './components/Page';
-function App() {
+import  DataContainer from './containers/DataContainer';
+import configureStore from './redux/configureStore';
+
+const store = configureStore();
+
+export default function App() {
   return (
     <div className="App">
-      <Page />
+      <Provider store={store}>
+      <DataContainer />
+      </Provider>
     </div>
   );
 }
 
-export default App;
