@@ -10,7 +10,7 @@ import {
 function ListComponent({data}) {
   return (
     <List>
-      {data.map(user => {
+      {data && data.map(user => {
         return <ListItem  name={user.name} key={user.id} />
       })}
       

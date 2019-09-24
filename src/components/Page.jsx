@@ -14,11 +14,12 @@ function Page(props) {
   useEffect(() => {
     getData()
   }, [getData])
-
+  
+  console.log("TCL: Page -> data", listData)
   return (
     <div>
       <Header />
-      <List data={listData} />
+      <List data={listData.data} />
     </div>
   )
 }
