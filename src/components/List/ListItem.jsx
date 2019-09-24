@@ -5,14 +5,14 @@ import {
   Item,
 } from './styles';
 
-function ListItem(props) {
+function ListItem({name}) {
   return (
-    <Item>text</Item>
+    <Item>{name}</Item>
   )
 }
 
 ListItem.propTypes = {
-
+  name: PropTypes.string,
 }
 
 export default ListItem

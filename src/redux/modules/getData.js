@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../../axios";
 
 const FETCH_DATA_START = 'FETCH_DATA_START';
 const FETCH_DATA_SUCCESS = 'FETCH_DATA_SUCCESS';
@@ -27,9 +27,9 @@ export function fetchDataFail(error) {
 export const fetchData = () => {
   return dispatch => {
     dispatch(fetchDataRequest());
-    axios.get('/users.json')
+    axios.get('/users')
       .then(response => {
-        dispatch(fetchDataSuccess(response))
+        dispatch(fetchDataSuccess(response.data))
       })
       .catch(error => {
         dispatch(fetchDataFail(error))
@@ -42,7 +42,7 @@ const initialState = {
   loading: false,
 }
 
-export default function reducer(state = initialState, action) {
+export default function usersReducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_DATA_START:
       return {

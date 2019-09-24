@@ -6,6 +6,10 @@ export const List = styled.ul`
 
 export const Item = styled.li`
   padding: 10px;
-  background-color: grey;
-  border: 1px solid darkgrey;
+  margin-bottom: 10px;
+  
+  list-style: none;
+
+  background-color: #edeaed;
+  border: 1px solid #d0cdd1;
 `;

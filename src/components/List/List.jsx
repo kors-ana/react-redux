@@ -7,16 +7,19 @@ import {
   List,
 } from './styles';
 
-function ListComponent(props) {
+function ListComponent({data}) {
   return (
     <List>
-      <ListItem />
+      {data.map(user => {
+        return <ListItem  name={user.name} key={user.id} />
+      })}
+      
     </List>
   )
 }
 
 ListComponent.propTypes = {
-
+  data: PropTypes.array,
 }
 
 export default ListComponent
