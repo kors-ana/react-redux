@@ -8,7 +8,7 @@ export function* fetchDataSaga() {
   yield put(actions.fetchDataRequest());
   try {
     const response = yield axios.get('/users');
-    yield put(actions.fetchDataSuccess(response));
+    yield put(actions.fetchDataSuccess(response.data));
   } catch (error) {
     yield put(actions.fetchDataFail(error));
   }

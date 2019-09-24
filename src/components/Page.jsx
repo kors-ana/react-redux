@@ -19,7 +19,7 @@ function Page(props) {
   return (
     <div>
       <Header />
-      <List data={listData.data} />
+      <List data={listData} />
     </div>
   )
 }

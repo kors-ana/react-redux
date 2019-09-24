@@ -27,20 +27,6 @@ export function fetchData() {
   }
 }
 
-
-// export const fetchData = () => {
-//   return dispatch => {
-//     dispatch(fetchDataRequest());
-//     axios.get('/users')
-//       .then(response => {
-//         dispatch(fetchDataSuccess(response.data))
-//       })
-//       .catch(error => {
-//         dispatch(fetchDataFail(error))
-//       })
-//   }
-// }
-
 const initialState = {
   data: [],
   loading: false,
