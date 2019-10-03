@@ -6,7 +6,7 @@ import List from './List/List';
 
 import {
   fetchData
-} from '../redux/modules/getData';
+} from '../redux/modules/ducks/user.duck';
 
 function Page(props) {
   const { getData, listData } = props; 

@@ -2,7 +2,7 @@ import { put, takeEvery } from 'redux-saga/effects';
 
 import axios from "../../axios";
 import * as actionTypes from "../modules/constants";
-import * as actions from '../modules/getData';
+import * as actions from '../modules/ducks/user.duck';
 
 export function* fetchDataSaga() {
   yield put(actions.fetchDataRequest());

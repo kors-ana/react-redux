@@ -2,7 +2,7 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 // import thunk from 'redux-thunk';
 import createSagaMiddleware from 'redux-saga';
 
-import usersReducer from './modules/getData';
+import usersReducer from './modules/ducks/user.duck';
 import { watchUsers } from './sagas/users';
 
 const sagaMiddleware = createSagaMiddleware();
